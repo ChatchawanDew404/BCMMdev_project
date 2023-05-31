@@ -10,6 +10,7 @@
 - use "npm install" in terminal
 - use "npm run dev" to run project
 
+------
 💖 ALL SYSTEM
 
 [🟢 CLIENT]
