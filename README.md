@@ -1,6 +1,4 @@
-# BCMMdev_project_2023
-
-Welcome to BCMMDev project 2023
+# Welcome to BCMMDev project 2023
 
 ![Frontend + Backend](https://github.com/ChatchawanDew404/BCMMdev_project_2023/assets/89406698/800ff8fd-694b-4d37-ae9d-fc7d81316565)
 
