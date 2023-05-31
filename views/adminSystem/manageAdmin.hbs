@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Admin</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+               <div class="manageAdmin-header">
+                    <h2>List of administrators</h2>
+                    <a href="/admin/manageAdmin/createAdmin" class="create-admin-btn">Create Admin +</a>
+                </div>
+
+
+            <div class="manageAdminBx">
+                
+                <div class="search-admin">
+                    <input type="text" name="" id="searchAdminName" placeholder="Search Admin Name...">
+                    <i class='bx bx-search-alt-2 search-admin-btn'></i>
+                </div>
+               <div class="show-admin-list">
+                 <table class="admin-list">
+                    <tr>
+                        <th>No.</th>
+                        <th>username</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+
+                    {{#each allAdmin}}
+                    <tr class="adminList">
+                        <td>{{this.id}}</td>
+                        <td class="adminName">{{this.username}}</td>
+                        <td class="adminEmail">{{this.email}}</td>
+                        <td><a href="/admin/manageAdmin/changePwd/admin-{{this.id}}" class="password-admin"><i class='bx bxs-edit-alt' ></i></a></td>
+                        <td><a href="/admin/manageAdmin/editAdmin/admin-{{this.id}}" class="edit-admin"><i class='bx bxs-edit-alt' ></i></a></td>
+                        <td><a href="/admin/manageAdmin/deleteAdmin/admin-{{this.id}}" class="delete-admin"><i class='bx bxs-trash'></i></a></td>
+                    </tr>
+                 {{/each}}
+                
+                </table>
+               </div>
+
+
+            </div>
+
+            
+            </div>
+
+        </div>
+
+
+
+    {{>allScript}}
+</body>
+
+</html>

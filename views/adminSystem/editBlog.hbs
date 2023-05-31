@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+<body>
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Admin</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+      <div class="createBlogHeader">
+        <h2><i class='bx bxs-edit'></i>Edit Blog</h2>
+      </div>
+
+      <div class="editBlogBx">
+       <div class="blogBoxLayout">
+           <div class="boxLeft" id="{{getEditBlogData.id}}">
+
+            <div class="uploadImageBx">
+                <img src="/public/createBlogImg/{{getEditBlogData.imageBlog}}" alt="" class="showEditImgBlog">
+                <input type="file" id="editBlogImg" accept="image/* ,.jpg, .jpeg, .png" hidden>
+                <label for="editBlogImg"><i class='bx bx-upload'></i></label>
+            </div>
+
+            <select name="" id="editBlogCategory" data-blogCategory="{{getEditBlogData.category}}">
+              <option value="Select you category" disabled selected>Select you category</option>
+              <option value="Technology">Technology</option>
+              <option value="Business">Business</option>
+              <option value="Investment">Investment</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Network & System ">Network & System </option>
+              <option value="IT Management">IT Management </option>
+              <option value="Database Management">Database Management</option>
+              <option value="Website">Website</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <input type="text" id="editBlogTitle" value="{{getEditBlogData.title}}" placeholder="Enter your title ...">
+
+            <textarea name="" id="editBlogContent" placeholder="Enter your content ..."> {{getEditBlogData.content}}</textarea>
+
+           </div>
+
+
+           <div class="boxRight">
+              <h1>#header1</h1>
+              <h2>##header2</h2>
+              <h3>###header3</h3>
+              <h4>####header4</h4>
+              <h5>#####header5</h5>
+              <h6>######header6</h6>
+           </div>
+       </div>
+
+
+        <div class="editBlogBtn">
+       <button class="edit_Blog_Btn">Edit</button>
+        <a href="/admin/manageBlog" class="cancel_edit_blog_btn">Cancel</a>
+      </div>
+      </div>
+
+            </div>
+<p class="testTx"></p>
+        </div>
+
+
+
+    {{>allScript}}
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+.register .header{text-align: center; width: 100%; margin: auto; margin-bottom: 60px;}
+.register .header p{color: var(--blue1); margin-bottom: 10px;}
+.register .header h2{max-width: 650px;font-size: 40px; margin: auto;}
+
+
+.register .row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.register .row .left-col {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding:60px 40px;
+}
+
+.register .row .left-col .change-register-login{
+    width: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+gap: 40px;
+margin-bottom: 30px;
+}
+
+.register .row .left-col .change-register-login p{
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.register .row .left-col .change-register-login p.active{
+    color: var(--blue1);
+}
+
+/*--- show register or login ---*/
+.register .row .left-col .show-register-login{
+    /* background: #d0d0d0; */
+    position: relative;
+    height:400px;
+}
+.register .row .left-col .show-register-login input{
+    width: 100%;
+    padding: 15px 10px;
+    background:#efefef;
+    border: none;
+    outline: none;
+}
+
+/* --- get active if user click and change (active) */
+.register .row .left-col .show-register-login .register-bx.active{
+    visibility: visible;
+    opacity: 1;
+left: 0;
+ transition: all .4s ease;
+}
+.register .row .left-col .show-register-login .login-bx.active{
+    visibility: visible;
+    opacity: 1;
+    right:0;
+     transition: all .4s ease;
+}
+
+
+
+
+/*-- register bx */
+.register .row .left-col .show-register-login .register-bx{
+opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -125%;
+    height: 100%;
+    transition: all .4s ease;
+}
+.register .row .left-col .show-register-login .register-bx .inputBx{
+    margin-bottom: 15px;
+}
+.register .row .left-col .show-register-login .register-bx .inputBx label{
+    padding: 5px 0;
+    display: block;
+    font-size: 13px;
+    color: var(--gray);
+}
+/* already have account text */
+.register .row .left-col .show-register-login .register-bx p{
+    margin-bottom: 20px;
+   color: black;
+}
+.register .row .left-col .show-register-login .register-bx .login-now{
+    font-size: 14px;
+    cursor: pointer;
+   color: var(--blue1);
+}
+/* btn */
+.register .row .left-col .show-register-login .register-bx button{
+    background: var(--blue1);
+    padding: 13px;
+    color: white;
+    display: block;
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    cursor: pointer;
+}
+.register .row .left-col .show-register-login .register-bx button:hover{
+    background: var(--blue-btn-hover);
+}
+
+
+
+/*-- login  bx */
+.register .row .left-col .show-register-login .login-bx{
+opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: -125%;
+    height: 100%;
+    transition: all .4s ease;
+}
+.register .row .left-col .show-register-login .login-bx .inputBx{
+    margin-bottom: 15px;
+}
+.register .row .left-col .show-register-login .login-bx .inputBx label{
+    padding: 5px 0;
+    display: block;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+/* remember checkbox */
+.register .row .left-col .show-register-login .login-bx .checkBx{
+    margin: 20px 0;
+    font-size: 15px;
+}
+.register .row .left-col .show-register-login .login-bx .checkBx input{
+  width: 13px;
+}
+
+.register .row .left-col .show-register-login .login-bx .bx{
+    font-size: 14px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.register .row .left-col .show-register-login .login-bx .register-now{
+    font-size: 14px;
+    cursor: pointer;
+   color: var(--blue1);
+}
+.register .row .left-col .show-register-login .login-bx .forget-password{
+    font-size: 14px;
+   color: var(--blue1);
+}
+.register .row .left-col .show-register-login .login-bx .forget-password:hover,
+.register .row .left-col .show-register-login .login-bx .register-now:hover,
+.register .row .left-col .show-register-login .register-bx .login-now:hover{
+   color: var(--blue-btn-hover);
+   text-decoration: underline;
+}
+/* btn */
+.register .row .left-col .show-register-login .login-bx button{
+    background: var(--blue1);
+    padding: 13px;
+    color: white;
+    display: block;
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    cursor: pointer;
+}
+.register .row .left-col .show-register-login .login-bx button:hover{
+    background: var(--blue-btn-hover);
+}
+
+
+/* ------ right col */
+.register .row .right-col{
+    /* position: relative; */
+    display: flex;
+    align-content: center;
+}
+.register .row .right-col img{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+
+
+/* ===================================== */
+/*             #  media query  #         */
+/* ===================================== */
+@media only screen and (max-width: 992px){
+    .register .row{
+        grid-template-columns:1fr;
+    }
+    .register .row .left-col {
+        padding:60px 20px;
+    }
+    .register .row .left-col .show-register-login{
+        height:350px;
+        transition: all .4s ease;
+    }
+}
+@media only screen and (max-width: 768px){.register .header h2{font-size: 32px;}}
+@media only screen and (max-width: 600px){.register .header h2{font-size: 28px;}}
+@media only screen and (max-width: 480px){
+.register .header h2{font-size: 24px; max-width: 350px; margin: auto;}
+.register .row .left-col .change-register-login p{
+    font-size: 17px;
+}
+.register .row .left-col .show-register-login .login-bx .bx{
+    font-size: 15px;
+    display: grid;gap: 10px;}
+}
+
+

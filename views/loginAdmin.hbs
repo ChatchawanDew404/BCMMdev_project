@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="LoginAdmin"}}
+<body>
+
+<div class="screen">
+
+    <div class="loginBx">
+        <div class="right-bx"> 
+      <div class="content">
+        <div class="logo">
+          <img src="/public/img/logo.png" alt=""> BCMMDev
+          </div>
+        <h2>Admin login</h2>
+        <div class="login-Input">
+           <div class="inputBx">
+            <i class='bx bx-user-circle input-icon'></i>
+             <input type="text" placeholder="Enter you name or email..." id="login_page_admin_email">
+           </div>
+           <div class="inputBx">
+            <i class='bx bxs-key input-icon'></i>
+             <input type="password" placeholder="Enter you password..." id="login_page_admin_pwd">
+           </div>
+           <div class="btn">
+             <button class="admin-loginBtn">login</button>
+             <a href="/home" class="goBack">go back</a>
+           </div>
+        </div>
+      </div>
+        </div>
+
+        <div class="left-bx">
+          <div class="content">
+            <div class="image"><img src="/public/img/adminLogin.png" alt=""></div> 
+          </div>
+        </div>
+
+    </div>
+
+</div>
+{{> allScript}}
+</body>
+</html>
+

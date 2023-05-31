@@ -1,0 +1,1041 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+/*===========================================================*/
+/*                          Banner Section                   */
+/*===========================================================*/
+
+/* Swiper Btn next and prev */
+.homeBanner .swiper-button-prev,
+.homeBanner .swiper-button-next{
+    background:rgb(71, 97, 255,0.7);
+    border-radius: 50%;
+    padding: 30px;
+}
+.homeBanner .swiper-button-prev:hover,
+.homeBanner .swiper-button-next:hover{
+    background:var(--blue1);
+}
+.homeBanner .swiper-button-prev::after,
+.homeBanner .swiper-button-next::after{
+    font-size: 30px;
+    color: white;
+}
+
+.homeBanner .swiper-button-prev{left: 0.5%;}
+.homeBanner .swiper-button-next{right: 0.5%;}
+
+/* -- banner  */
+.homeBanner .firstSlide .container,
+.homeBanner .secondSlide .container{
+    position: relative;
+    height: 100vh;
+}
+.homeBanner .swiper-wrapper .firstSlide,
+.homeBanner .swiper-wrapper .secondSlide{
+   position: relative;
+   background-position: center !important;
+   background-size: cover !important;
+   position: relative;
+}
+
+.homeBanner .swiper-wrapper .firstSlide{background: url(/public/img/banner1.jpg);}
+.homeBanner .swiper-wrapper .secondSlide{background: url(/public/img/banner2.jpg);}
+
+.homeBanner .swiper-wrapper .firstSlide::after,
+.homeBanner .swiper-wrapper .secondSlide::after{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    z-index: -1;
+}
+
+/* home banner content */
+.homeBanner .content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    text-transform: capitalize;
+}
+.homeBanner .content h3{
+    color: white;
+    font-size: 30px;
+}
+.homeBanner .content h1{
+    color: white;
+    font-size: 70px;
+    margin: 20px 0px 40px;
+}
+.homeBanner  .content .btn-slide{
+    display: inline-block;
+    background: var(--blue1);
+    color: white;
+    padding: 20px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.homeBanner  .content .btn-slide:hover{
+    background: var(--blue-btn-hover);
+}
+
+
+
+/*===========================================================*/
+/*                    Functional section                   */
+/*===========================================================*/
+.functional .row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.functional .col{
+    text-align: center;
+   padding:40px 15px 50px;
+   border: 1px solid rgba(0,0,0,0.08);
+   box-shadow: 3px 30px 30px rgba(0,0,0,.08);
+}
+.functional .col i{
+    font-size: 35px;
+    text-align: center;
+    background: var(--blue1);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+.functional .col h3{
+ font-size: 26px;
+ font-weight: 300;
+ margin: 40px 0 20px;
+}
+.functional .col p{
+font-size: 17px;
+color: var(--gray);
+}
+
+
+/* ===================================== */
+/*               video section            */
+/* ===================================== */
+.video .row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+}
+
+.video .row .video-bx{
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    height: 100%;
+}
+/*---- video----*/
+.video .row .video-bx .play-video-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    background: var(--blue1);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.video .row .video-bx .animation-play-video-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: playBtn 2s 1s infinite;
+    padding: 40px;
+    background-color: rgba(71, 97, 255,0.8);
+    border-radius: 50%;
+    z-index: 1;
+}
+@keyframes  playBtn{
+    0%{padding: 40px; opacity: 1;}
+    100%{ padding: 90px; opacity: 0;}
+}
+
+
+.video .row .video-bx .play-video-btn:hover{
+    background: var(--blue-btn-hover);
+}
+.video .row .video-bx .play-video-btn i{
+   color: white;
+   font-size: 35px;
+}
+
+.video .row .video-bx video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ---- content video ----*/
+.video .row .content-video{
+    padding: 0 40px;
+}
+
+.video .row .content-video h3{
+    color: var(--blue1);
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.video .row .content-video h2{
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.video .row .content-video p{
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 200 ;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+
+.video .content-video .content-video-bx{
+    display: inline-block;
+    background: var(--blue1);
+    color: white;
+    padding:15px 20px;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.video .content-video .content-video-bx:hover{
+    background: var(--blue-btn-hover);
+}
+
+
+.video .row .content-video .mini-row{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 40px;
+   margin: 20px 0;
+}
+.video .row .content-video .mini-row .mini-col i{
+    font-size: 60px;
+    color: var(--blue1);
+ 
+}
+.video .row .content-video .mini-row .mini-col h3{
+   font-size: 20px;
+   color: black;
+   font-weight: 500;
+   margin: 15px 0;
+}
+.video .row .content-video .mini-row .mini-col p{
+   font-size: 15px;
+}
+
+.video .video-popup{
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.video .video-popup.active{
+    visibility: visible;
+    opacity: 1;
+    position:fixed;
+}
+
+.video .video-popup .video-bx{
+    position: relative;
+    max-width: 800px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.video .video-popup video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.video .video-popup .close-video{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.video .video-popup .close-video:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* ===================================== */
+/*              Service section          */
+/* ===================================== */
+.service .header{text-align: center; position: relative;}
+.service .header p{
+    color: var(--blue1);
+    font-size: 23px;
+}
+.service .header h2{
+font-size: 38px;
+margin: 20px 0;
+color: #171717;
+}
+.service .row{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.service .row .col{
+    transition: all .2s ease-in-out;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+}
+.service .row .col i{
+    transition: all .2s ease-in-out;
+    font-size: 70px;
+}
+.service .row .col h3{
+    transition: all .2s ease-in-out;
+    margin: 15px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+.service .row .col p{
+  font-size: 17px;
+  line-height: 1.5;
+}
+.service .row .col:hover{
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+
+}
+.service .row .col:hover i{
+    color: var(--blue1);
+}
+.service .row .col:hover h3{
+    color: var(--blue1);
+}
+
+/* ===================================== */
+/*               Blog section            */
+/* ===================================== */
+/*-- Blog header */
+
+.blog .header{
+    margin-bottom: 80px;
+    max-width: 550px;
+}
+.blog .header p{
+    color: var(--blue1);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.blog .header h2{
+    font-size: 45px;
+}
+
+/*-- Blog slide all */
+
+.title{
+    min-height: 80px;
+  }
+.blog .allBlogs .swiper-slide .content .category{
+    display: inline-block;
+   font-size: 12px;
+    background: var(--blue1);
+    padding: 8px;
+    text-align: center;
+    z-index: 10 !important;
+border-radius: 20px;
+    color: white;
+}
+
+.blog .allBlogs .swiper-slide .image img{
+    max-height: 250px;
+    /* min-height: 250px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.blog .allBlogs .swiper-slide{
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #fbfbfb;
+min-width: 290px;
+}
+
+.blog .allBlogs .swiper-slide .content{
+    padding: 15px 10px;
+}
+.blog .allBlogs .swiper-slide .content h2 a{
+    display: inline-block;
+    color: var(--black);
+    margin: 10px 0;
+    transition: all .2s ease;
+    font-size: 20px;
+}
+
+.blog .allBlogs .swiper-slide:hover h2 a{
+    color: var(--blue1);}
+.allBlogs .swiper-slide .content h2 a:hover{
+    color: var(--blue1);
+}
+
+.allBlogs .swiper-slide .content .blogData{
+    padding: 15px 0;
+    border-top: 1px solid rgb(237, 237, 237);
+           display: flex;
+           justify-content: space-between;   
+           font-size: 13px; 
+}
+
+
+
+/*-- blog btn control next or prev */
+.blog .allBlogs .header .controls{
+    position: absolute;
+    top: 100px;
+    right:10px;
+}
+.blog .allBlogs .header .control-blog-btn{
+    position: relative;
+    width: 140px;
+    height: 30px;
+}
+.blog .container .btn-blog{
+    transition: all .3s ease;
+    color: white;
+    padding: 15px 25px;
+    margin-top: 50px;
+    display: inline-block;
+    background: var(--blue1);
+    font-size: 18px;
+}
+.blog .container .btn-blog:hover{
+    background-color: var(--blue-btn-hover);
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.blog .allBlogs  .header .swiper-button-next,
+.blog .allBlogs .header .swiper-button-prev{
+    transition: all .2s ease;
+    background: var(--blue1);
+    color: white;
+border-radius: 50%;
+padding: 27px;
+z-index: 100;
+}
+.blog .allBlogs .header .swiper-button-next{   position: absolute !important; right: 0;}
+.blog .allBlogs .header .swiper-button-prev{   position: absolute !important; left: 0;}
+
+.blog .allBlogs .header .swiper-button-next::after,
+.blog .allBlogs .header .swiper-button-prev::after{
+    font-size: 30px;
+}
+
+
+.blog .allBlogs .header .swiper-button-next:hover,
+.blog .allBlogs .header .swiper-button-prev:hover{
+    background: var(--blue-btn-hover);
+    transform: scale(1.1);
+}
+
+
+
+/* ===================================== */
+/*             Community section         */
+/* ===================================== */
+/*-- community header */
+.community .swiper-wrapper{
+    padding: 30px 0;
+}
+.community .header{
+    margin-bottom: 80px;
+    max-width: 550px;
+}
+.community .header p{
+    color: var(--blue1);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.community .header h2{
+    font-size: 45px;
+}
+/* --community content */
+.community .swiper-slide{
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+    border-radius: 10px;
+    transform: scale(0.7);
+    transition: all .5s ease;
+}
+.community .swiper-slide-active{
+    transform: scale(1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    color: rgb(0, 0, 0) !important;
+}
+/* .community .swiper-slide-active .userBx .user-name-date p{
+    color: white;
+}
+.community .swiper-slide-active .content p{
+    color: white;
+}
+.community .swiper-slide-active .outer-comment{
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+} */
+
+.community .swiper-slide .userBx{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.community .swiper-slide .userBx .user-name-date .show-category{
+    background: var(--blue1);
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 20px;
+}
+.community .swiper-slide .userBx .user-name-date p:nth-child(2){
+    padding: 5px 0 3px;
+    font-size: 16px;
+    color: black;
+}
+.community .swiper-slide .userBx .user-name-date p:nth-child(3){
+    font-size: 12px;
+}
+.community .swiper-slide .userBx .userImg{
+    position: relative;
+width: 50px;
+height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+}
+.community .swiper-slide .userBx .userImg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.community .swiper-slide .content{
+    padding: 20px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.community .swiper-slide .outer-comment{
+    border-top: 1px solid rgba(0,0,0,.1);
+    margin-top: 5px;
+    padding-top: 15px;
+    color: black;
+}
+
+.community .swiper-slide .content p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.community .swiper-slide .outer-comment{
+    border-top: 1px solid rgba(0,0,0,.1);
+    margin-top: 5px;
+    padding-top: 15px;
+}
+
+/*-- community btn control next or prev */
+.community .allCommunity .controls{
+    position: absolute;
+    top: 100px;
+    right:10px;
+}
+.community .allCommunity .control-community-btn{
+    position: relative;
+    width: 140px;
+    height: 30px;
+}
+.community .container .btn-community{
+    margin-top: 15px;
+    transition: all .3s ease;
+    color: white;
+    padding: 15px 25px;
+    display: inline-block;
+    background: var(--blue1);
+    font-size: 18px;
+}
+.community .container .btn-community:hover{
+    background-color: var(--blue-btn-hover);
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.community .allCommunity .swiper-button-next,
+.community .allCommunity .swiper-button-prev{
+    transition: all .2s ease;
+    background: var(--blue1);
+    color: white;
+border-radius: 50%;
+padding: 27px;
+}
+.community .allCommunity .swiper-button-next{   position: absolute !important; right: 0;}
+.community.allCommunity .swiper-button-prev{   position: absolute !important; left: 0;}
+
+.community .allCommunity .swiper-button-next::after,
+.community .allCommunity .swiper-button-prev::after{
+    font-size: 30px;
+}
+
+
+.community .allCommunity .swiper-button-next:hover,
+.community .allCommunity .swiper-button-prev:hover{
+    background: var(--blue-btn-hover);
+    transform: scale(1.1);
+}
+
+
+/* ===================================== */
+/*               Team section            */
+/* ===================================== */
+.team .header{
+    width: 100%;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.team .header p{margin-bottom: 15px; color: var(--blue1); font-size: 22px;}
+.team .header h2{font-size: 45px; color: var(--black);}
+
+
+.team .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+.team .row .col{
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.08);
+    background: rgb(255, 255, 255);
+}
+.team .row .col .social{
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    transition: all .3s ease;
+}
+.team .row .col .social i{
+    border-radius: 50%;
+  font-size: 20px;
+  color: var(--blue1);
+  margin-bottom: 8px;
+  background: var(--white);
+  padding: 8px;
+  transition: all .3s ease;
+}
+.team .row .col .social i:hover{
+  color: var(--white);
+  background: var(--blue1);
+}
+.team .row .col:hover .social{
+    left: 20px;
+}
+
+
+.team .row .col .image{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+ position: relative;
+ height: 280px;
+ width: 100%;
+}
+.team .row .col .image img{
+    width: 100%;
+    height: 100%;
+    block-size: auto;
+}
+
+.team .row .col .content{
+ text-align: center;
+ padding: 20px 0;
+}
+.team .row .col .content h4{
+font-size: 22px;
+font-weight: 500;
+margin-bottom: 20px;
+}
+.team .row .col .content p{
+    color: var(--blue1);
+}
+
+
+/* ===================================== */
+/*               Contact section         */
+/* ===================================== */
+.contact .container .row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.contact .container .row .col .image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.contact .container .col .mini-title{
+    color: var(--blue1);
+    font-size: 23px;
+
+}
+
+
+.contact .container .col-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .container .col h2{
+    font-weight: 600;
+    margin: 20px 0;
+    max-width: 600px;
+color: var(--black);
+font-size: 50px;
+}
+.contact .container .row .col .contact-btn-Bx{
+    margin-top: 30px;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+background: var(--blue1);
+font-size: 18px;
+}
+.contact .container .row .col p{
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.contact .container .row .col .contact-btn:hover{
+    background: var(--blue-btn-hover);
+}
+
+
+
+
+
+
+/* ===================================== */
+/*             #  media query  #         */
+/* ===================================== */
+@media only screen and (max-width: 992px){
+    /*-- Functional */
+    section.functional{
+        padding: 100px 50px;
+    }
+    .functional .row{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*-- Video */
+    .video .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    /*-- Service */
+    .service .row{
+    grid-template-columns: repeat(2,1fr);
+}
+
+/*-- Blog section */
+.blog .header h2{
+    font-size: 38px;
+}
+.blog .allBlogs .swiper-slide .content h2 a{
+    font-size: 20px;
+}
+/*-- Community section */
+.community .allCommunity .swiper-slide .content h2 a{
+    font-size: 22px;
+}
+
+/* Contact Section */
+.contact .container .row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+}
+
+
+@media only screen and (max-width: 768px){
+    /*  -- Banner */
+    .homeBanner .content h1{
+        color: white;
+        font-size: 70px;
+        margin: 20px 0px 40px;
+    }
+
+.homeBanner .swiper-button-prev{left:0%; top: 95%;}
+.homeBanner .swiper-button-next{right:0%; top: 95%;}
+
+.homeBanner .content{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.homeBanner .content h1{
+    font-size: 65px;
+}
+
+/*-- Functional */
+.functional .row{
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+    /*-- video */
+    .video .container .content-video{
+        padding:10px ;
+    }
+    /* Service */
+    .service .row{
+        gap: 20px;
+    }
+    
+    .service .row .col{
+        padding: 20px;
+    }
+
+    /* --blog */
+    /* (header) */
+    .blog .header{
+        width: 100% !important;
+        text-align: center;
+        max-width: 500px;
+        margin: auto;
+        margin-bottom: 120px;
+    }
+    .blog .header h2{
+        font-size: 35px;
+    }
+    /* (controls) */
+    .blog .allBlogs .header .controls{
+        position: absolute;
+        top: 170px;
+        right:50%;
+        transform: translateX(60%);
+    }
+    .blog .allBlogs .header .control-blog-btn{
+        position: relative;
+        width: 140px;
+        height: 30px;
+    }
+
+     /* --Community*/
+    /* (header) */
+    .community .header{
+        width: 100% !important;
+        text-align: center;
+        max-width: 500px;
+        margin: auto;
+        margin-bottom: 120px;
+    }
+    .community .header h2{
+        font-size: 40px;
+    }
+    /* (controls) */
+    .community .allCommunity .controls{
+        position: absolute;
+        top: 170px;
+        right:53%;
+        transform: translateX(65%);
+    }
+    .community .allCommunity .control-community-btn{
+        position: relative;
+        width: 140px;
+        height: 30px;
+    }
+/* Team */
+.team .header h2{
+    font-size: 40px;
+}
+
+}
+
+
+@media only screen and (max-width: 600px){
+    .homeBanner .content h1{
+        font-size: 60px;
+    }
+
+    /*-- Functional */
+    .functional .col i{
+        font-size: 30px;
+        padding: 20px;
+    }
+     /*-- video */
+    .video .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    /*-- video popup */
+    .video .video-popup .video-bx{
+        max-height: 300px;
+    }
+    /*-- Service */
+    .service .header h2{
+        font-size: 30px;
+        }
+/*-- Blog Section */
+
+    .blog .header h2{
+            font-size: 35px;
+    }
+        /* (controls) */
+    .blog .allBlogs .header .control-blog-btn{
+            position: relative;
+            width: 100px;
+            height: 30px;
+    }
+    .blog .allBlogs .header .swiper-button-next,
+    .blog .allBlogs .header .swiper-button-prev{
+    padding: 20px;
+    }
+    .blog .allBlogs .header .swiper-button-next::after,
+    .blog .allBlogs .header .swiper-button-prev::after{
+        font-size: 20px;
+    }
+
+
+/*-- Community Section */
+
+    .community .header h2{
+            font-size: 35px;
+    }
+        /* (controls) */
+    .community .allCommunity .control-community-btn{
+            position: relative;
+            width: 100px;
+            height: 30px;
+    }
+    .community .allCommunity .swiper-button-next,
+    .community .allCommunity .swiper-button-prev{
+    padding: 20px;
+    }
+    .community .allCommunity .swiper-button-next::after,
+    .community .allCommunity .swiper-button-prev::after{
+        font-size: 20px;
+    }
+    /*-- Team Section*/
+    .team .header h2{
+        font-size: 30px;
+        max-width: 400px;
+        margin: auto;
+        }
+
+    /*-- Contact */
+    .contact .container .col h2{
+    font-size: 30px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 480px){
+    /* -- banner */
+    .homeBanner .content h1{
+        font-size: 50px;
+    }
+    .homeBanner .content h3{
+        font-size: 20px;
+    }
+
+    /*-- Functional */
+    section.functional{
+        padding: 100px 0;
+    }
+
+
+    /*-- Video */
+    .video .row .content-video h2{
+        font-size: 28px;
+        margin: 20px 0;
+    }
+    
+    .video .row .content-video .mini-row{
+        gap: 20px;
+    }
+
+    .video .row .content-video .mini-row .mini-col i{
+        font-size: 50px;
+     
+    }
+    .video .row .content-video .mini-row .mini-col h3{
+       font-size: 18px;
+    }
+    .video .row .content-video .mini-row .mini-col p{
+       font-size: 14px;
+    }
+      /*-- Service */
+      .service .row{
+        grid-template-columns: 1fr;
+    }
+    .service .header h2{
+        font-size: 25px;
+    }
+    /*-- Team Section */
+    .team .header h2{
+        font-size: 25px;
+}
+}
+
+@media only screen and (max-width: 380px){
+    .blog .header h2{
+        font-size: 30px;
+}
+    .community .header h2{
+        font-size: 30px;
+}
+
+}

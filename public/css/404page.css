@@ -1,0 +1,74 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+.page_404{
+    text-align: center;
+}
+.page_404 .image{
+    max-width: 500px;
+    max-height: 500px;
+    text-align: center;
+    margin: auto;
+}
+.page_404 h1{
+    padding: 0 10px;
+    font-size: 60px;
+    margin: 30px 0;
+    color: rgb(56, 56, 56);
+}
+.page_404 p{
+    padding: 0 10px;
+    max-width: 500px;
+    margin: auto;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: rgb(56, 56, 56);
+}
+
+.page_404 .page_404_btn{
+    padding: 12px 30px;
+    display: inline-block;
+    margin: 15px ;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .5s;
+}
+.page_404 .page_404_btn:hover{
+   transform: scale(1.1);
+}
+.page_404 .page_404_btn.goHome{ 
+    border: 1px solid var(--blue1);
+    background: var(--blue1);
+    color: white;
+}
+.page_404 .page_404_btn.report{
+    border: 1px solid var(--blue1);
+    color:var(--blue1);
+}
+
+
+
+/* ---------- Media query ---------------- */
+@media only screen and (max-width: 768px){
+    .page_404 h1{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .page_404 h1{
+        font-size: 30px;
+    }
+    .page_404 p{
+        font-size: 15px;
+    }
+    .page_404 .page_404_btn{
+        padding: 10px 25px;
+        margin: 10px ;
+        font-size: 13px;
+    }
+}

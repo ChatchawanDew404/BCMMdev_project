@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Community"}}
+<link rel="stylesheet" href="">
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Community"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Community</p>
+  </div>
+  </div>
+</section>
+
+{{!-- COmmunity all post --}}
+<section class="community">
+  <div class="container">
+
+    
+  {{#if allPostData}}
+  <div class="option-community">
+        <select name="" id="selectCommunity">
+            <option value="" selected>All</option>
+            <option value="">Technology</option>
+            <option value="">Business</option>
+            <option value="">Investment</option>
+            <option value="">Marketing</option>
+            <option value="">Network & System </option>
+            <option value="">IT Management </option>
+            <option value="">Database Management</option>
+            <option value="">Website</option>
+            <option value="">Other</option>
+        </select>
+        
+        <div class="newPost">
+            <a href="/community/newPost">Create Post +</a>
+        </div>
+    </div>
+   <div class="row">
+
+    {{#each allPostData}}
+       <a href="/community/user-post-{{this.id}}">
+         <div class="post-col">
+            <div class="post-header-bx">
+                <div class="image"><img src="/public/cmmUserPostImg/{{this.userImage}}" alt=""></div>
+                <div class="data">
+                    <p class="post-category">{{this.category}}</p> 
+                    <p class="user-post">{{this.username}}</p>
+                    <p class="date-post">{{this.createDateAt}}</p>
+                </div>
+            </div>
+            <div class="content ">
+              <p class="showTextMax">{{this.content}}</p>
+            </div>
+            <div class="comments">
+              {{#if this.commentsCount}}
+                <p>{{this.commentsCount}} Comments</p>
+              {{else}}
+              <p>0 Comment</p>
+              {{/if}}
+            </div>
+        </div>
+       </a>
+    {{/each}}
+    
+    </div>
+    <div class="not-have-post">
+        <img src="/public/img/nohavePost.png" alt="">
+        <h1>It looks like this category hasn't been discussed yet. Let's create a post.</h1>
+       </div>
+
+  {{else}}
+  <div class="image err-community" >
+    <img src="/public/img/error_page.png" alt="">
+    <h1>Oh, there seems to be some technical issues going on. Please contact the sponsor.</h1>
+    <a href="/contact" class="report-problem-cmm">Contact Us </a>
+  </div>
+  {{/if}}
+
+
+
+  </div>
+</section>
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

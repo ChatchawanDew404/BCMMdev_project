@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Home"}}
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+
+{{!---------------------------- Banner-----------------------------------}}
+ <div class="swiper homeBanner">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide firstSlide">
+        <div class="container">
+          <div class="content">
+             <h3>Welcome to BCMMDev</h3>
+            <h1>ready to talk with many developers</h1>
+            <a href="/community" class="btn-slide">Explore Community</a>
+          </div>
+        </div>     
+        </div>
+
+
+    <div class="swiper-slide secondSlide">
+        <div class="container">
+          <div class="content">
+             <h3>Welcome to BCMMDev</h3>
+            <h1>You can start as a developer today.</h1>
+            <a href="/blog" class="btn-slide">Explore Blog</a>
+          </div>
+        </div>     
+        </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+{{!--------------------------- Functional show --}}
+<section class="functional">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <i class='bx bx-award' ></i>
+        <h3>Award Winning</h3>
+        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col">
+        <i class='bx bx-user-check'></i>
+        <h3>Professional Staff</h3>
+        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col">
+        <i class='bx bx-wallet' ></i>
+        <h3>Fair Prices</h3>
+        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="col">
+        <i class='bx bx-support'></i>
+        <h3>24/7 Support</h3>
+        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!--------------------------- Video Section --}}
+<section class="video">
+  <div class="container">
+
+<div class="row">
+   <div class="video-bx">
+      <video autoplay>
+        <source src="/public/img/video1.mp4" type="video/mp4">
+     </video>
+     <div class="play-video-btn">
+      <i class='bx bx-video'></i>
+   </div>
+    <div class="animation-play-video-btn"></div>
+  </div>
+<div class="content-video">
+   <h3>About Us</h3>
+   <h2>Great experience to learn and interact with the developer community.</h2>
+   <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+   <div class="mini-row">
+    <div class="mini-col">
+      <i class='bx bx-user-check'></i>
+      <h3>Managed Services</h3>
+      <p>Clita erat ipsum et lorem et sit sed stet lorem</p>
+    </div>
+    <div class="mini-col mini2">
+      <i class='bx bxs-user-badge'></i>
+      <h3>Dedicated Experts</h3>
+      <p>Clita erat ipsum et lorem et sit sed stet lorem</p>
+    </div>
+   </div>
+
+   <a href="/community" class="content-video-bx">Explore Community</a>
+</div>
+
+
+</div>
+
+<div class="video-popup">
+ <div class="video-bx">
+    <video autoplay loop controls>
+        <source src="/public/img/video1.mp4" type="video/mp4">
+     </video>
+ </div>
+     <i class='bx bx-x close-video'></i>
+</div>
+</div>
+</section> 
+
+
+{{!--------------------------- Service Section --}}
+<section class="service">
+<div class="container">
+    <div class="header">
+    <p>Our Service</p>
+    <h2>Services that We Offer <br> Blog and Developer Community</h2>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <i class='bx bx-universal-access'></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+    <div class="col">
+      <i class='bx bxs-shield-plus' ></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+    <div class="col">
+      <i class='bx bx-user-circle' ></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+    <div class="col">
+      <i class='bx bx-chat' ></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+    <div class="col">
+      <i class='bx bx-support' ></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+    <div class="col">
+      <i class='bx bx-time-five'></i>
+      <h3>Sample Headline</h3>
+      <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet</p>
+    </div>
+  </div>
+</div>
+</section>
+
+  
+{{!--------------------------- Blog Section --}}
+<section class="blog">
+  <div class="container">
+
+  <div class="swiper allBlogs">
+     <div class="header">
+      <p>Our Blogs</p>
+      <h2>We've Done Lot's of Awesome Blog</h2>
+
+    <div class="controls">
+      <div class="control-blog-btn">
+         <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+   </div>
+
+
+    </div>
+
+    <div class="swiper-wrapper">
+
+        {{#each getAllBlogData}}
+
+         <div class="swiper-slide">
+        <a href="/blog/readBlog/blogID-{{this.id}}" class="image"><img src="/public/createBlogImg/{{this.imageBlog}}" alt=""></a>
+
+        <div class="content">
+          <p class="category">{{this.category}}</p>
+
+          <h2 class="title"><a href="/blog/readBlog/blogID-{{this.id}}">{{this.title}}</a></h2>
+           <div class="blogData">
+             <p class="creator"><i class='bx bxs-user' ></i> <span>{{this.username}}</span></p>
+              <p class="createBlogTime"><span>{{this.createBlogAt}}</span></p>
+          </div>
+        </div>
+      </div>
+        {{/each}}
+
+    </div>
+  </div>
+
+  <a href="/blog" class="btn-blog">Explore Blog</a>
+  </div>
+</section>
+
+
+
+{{!------------------------------ Community --}}
+<section class="community">
+
+  <div class="container">
+
+ <div class="swiper allCommunity">
+     <div class="header">
+      <p>Our Community</p>
+      <h2>Join the discussion in our community here.</h2>
+
+    <div class="controls">
+      <div class="control-community-btn">
+         <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+   </div>
+
+    </div>
+
+    <div class="swiper-wrapper">
+
+      {{!-- <div class="swiper-slide">
+        <div class="userBx">
+          <div class="userImg"><img src="/public/img/user1.jpg" alt=""></div>
+            
+            <div class="user-name-date">
+              <p>David DevPro</p>
+              <p>11 Jan 2023</p>
+            </div>
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi ea a, quas consequatur Lorem ipsum dolor sit amet.
+             optio.</p>
+        </div>
+        <div class="outer-comment">1 comment</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="userBx">
+          <div class="userImg"><img src="/public/img/user1.jpg" alt=""></div>
+            
+            <div class="user-name-date">
+              <p>David DevPro</p>
+              <p>11 Jan 2023</p>
+            </div>
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi ea a, quas consequatur Lorem ipsum dolor sit amet.
+             optio.</p>
+        </div>
+        <div class="outer-comment">1 comment</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="userBx">
+          <div class="userImg"><img src="/public/img/user1.jpg" alt=""></div>
+            
+            <div class="user-name-date">
+              <p>David DevPro</p>
+              <p>11 Jan 2023</p>
+            </div>
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi ea a, quas consequatur Lorem ipsum dolor sit amet.
+             optio.</p>
+        </div>
+        <div class="outer-comment">No comment</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="userBx">
+          <div class="userImg"><img src="/public/img/user1.jpg" alt=""></div>
+            
+            <div class="user-name-date">
+              <p>David DevPro</p>
+              <p>11 Jan 2023</p>
+            </div>
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi ea a, quas consequatur Lorem ipsum dolor sit amet.
+             optio.</p>
+        </div>
+        <div class="outer-comment">No comment</div>
+      </div> --}}
+
+      {{#each getAllPostData}}
+      <a href="/community/user-post-{{this.id}}" class="swiper-slide">
+        <div class="userBx">
+          <div class="userImg"><img src="/public/cmmUserPostImg/{{this.userImage}}" alt=""></div>
+            
+            <div class="user-name-date">
+              <p class="show-category">{{this.category}}</p>
+              <p>{{this.username}}</p>
+              <p>{{this.createPostAt}}</p>
+            </div>
+        </div>
+        <div class="content">
+          <p class="community-slide-content">{{this.content}}</p>
+        </div>
+        {{#if this.commentsCount}}
+        <div class="outer-comment">{{ this.commentsCount}} Comments</div>
+      {{else}}
+        <div class="outer-comment">0 Comments</div>
+      {{/if}}
+      </a>
+      {{/each}}
+
+
+    </div>
+  </div>
+  
+  <a href="/community" class="btn-community">Explore Community</a>
+  </div>
+</section>
+
+{{!-- ------------------------ Team Section--}}
+<section class="team">
+  <div class="container">
+    <div class="header">
+      <p>Our Team</p>
+      <h2>Our Expert People Ready to Help You</h2>
+    </div>
+  <div class="row">
+    <div class="col">
+      <div class="image"><img src="/public/img/user1.jpg" alt=""></div>
+      <ul class="social">
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+        <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+      </ul>
+      <div class="content">
+           <h4>Alex Robin</h4>
+           <p>Founder & CEO</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="image"><img src="/public/img/user1.jpg" alt=""></div>
+      <ul class="social">
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+        <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+      </ul>
+      <div class="content">
+           <h4>Alex Robin</h4>
+           <p>Senior Fullstack</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="image"><img src="/public/img/user1.jpg" alt=""></div>
+      <ul class="social">
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+        <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+      </ul>
+      <div class="content">
+           <h4>Alex Robin</h4>
+           <p>Senior Officer </p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="image"><img src="/public/img/user1.jpg" alt=""></div>
+      <ul class="social">
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+        <li><a href=""><i class='bx bxl-linkedin'></i></a></li>
+      </ul>
+      <div class="content">
+           <h4>Alex Robin</h4>
+           <p>Executive Manager</p>
+      </div>
+    </div>
+
+ 
+
+  </div>
+  </div>
+</section>
+
+{{!---------------------------- Contact Us --}}
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="mini-title">Contact us</p>
+        <h2>Need Our Expert Help? We're Here!</h2>
+        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+        {{!-- <a href="/contact" class="contact-btn"><i class='bx bxs-phone-call' ></i> Contact Us</a> --}}
+        {{!-- <a href="/contact" class="contact-btn"><i class='bx bxs-phone-call' ></i> Contact Us</a> --}}
+        <a href="/contact" class="contact-btn-Bx"><i class='bx bxs-phone-call' ></i> Contact Us</a>
+      </div>
+      <div class="col col-2">
+        <div class="image">
+          <img src="/public/img/banner2.jpg" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{!--------------------------- allScript  from set up project--}}
+{{> allScript}}
+</body>
+</html>

@@ -1,0 +1,122 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+.footer{
+    background: var(--black);
+    color: rgb(184, 182, 182);
+    width: 100%;
+    padding: 80px 20px;
+}
+
+.footer .container .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap:50px 30px;
+}
+.footer .container .row .col i{
+    font-size: 20px;
+    color: white;
+}
+
+.footer .container .col h3{
+    color: white;
+    font-size: 25px; 
+    /* font-weight: 400;  */
+    margin-bottom: 20px;
+}
+
+.footer .container .row .col .f1 li{
+    margin-bottom: 10px;
+}
+.footer .container .row .col .socials i{
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 8px;
+    color: black;
+    background: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.footer .container .row .col .socials i:hover{
+    transform: scale(1.1);
+}
+.footer .container .row .col .f2 li a,
+.footer .container .row .col .f3 li a{
+    display: block;
+ margin-bottom: 10px;
+ color: rgb(184, 182, 182);
+ transition: all .3s ease;
+}
+
+.footer .container .row .col  li a:hover{
+    padding-left: 10px;
+    color: white;
+}
+
+
+.footer .container .row .ft_contact p{
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgb(184, 182, 182);
+}
+
+.footer .container .row .ft_contact .inputBx{
+    position: relative;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.footer .container .row .ft_contact .inputBx input{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background: none;
+    border: 1px solid rgb(184, 182, 182);
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    outline: none;
+
+}
+.footer .container .row .ft_contact .inputBx button{
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: white;
+    background: var(--blue1);
+    outline: none;
+    padding: 8px;
+    border: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.footer .container .row .ft_contact .inputBx button:hover{
+    background: var(--blue-btn-hover);
+}
+
+.copyright{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* ===================================== */
+/*             #  media query  #         */
+/* ===================================== */
+@media only screen and (max-width: 480px){
+    .footer{
+        padding: 80px 10px;
+    }
+    .footer .container .row .ft_contact p{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+{{>adminNavbar}}
+
+<div class="adminDashboard">
+    <div class="close-mobile-navbar"><i class='bx bx-x'></i></div> 
+    <div class="header">
+        <div class="menu"><i class='bx bx-menu' ></i> <span>Manage Blogs</span></div>
+    {{>adminHeaderUser}}
+    </div>
+
+    <div class="main-adminBx">
+            <div class="manageBlog-header">
+                <h2>List of all blogs</h2>
+                <a href="/admin/manageBlog/createBlog" class="create-blog-btn">Create Blog +</a>
+            </div>
+<div class="manageBlogBx">
+            <div class="search-blog">
+                    <input type="text" name="" id="admin-search-blog" placeholder="Search Blog Name...">
+                    <i class='bx bx-search-alt-2 search-blog-btn'></i>
+                </div>
+               <div class="show-blog-list">
+                 <table class="blog-list">
+                    <tr>
+                        <th>No.</th>
+                        <th>Image</th>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Creator</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+                    {{#each allBlog}}
+                    <tr class="blog-list-data">
+                        <td>{{this.id}}</td>
+                        <td><img src="/public/createBlogImg/{{this.imageBlog}}" alt=""></td>
+                        <td>{{this.category}}</td>
+                        <td><p class="blog-title">{{this.title}}</p></td>
+                        <td>{{this.date}}</td>
+                        <td>{{this.username}}</td>
+                        <td><a href="/admin/manageBlog/editBlog/blog-{{this.id}}" class="edit-blog"><i class='bx bxs-edit-alt' ></i></a></td>
+                        <td><a class="delete-blog" id={{this.id}}><i class='bx bxs-trash'></i></a></td>
+                    </tr>
+                 {{/each}} 
+                
+                </table>
+               </div>
+               </div>
+    </div>
+
+</div>
+
+   
+    {{>allScript}}
+
+    
+</body>
+
+</html>

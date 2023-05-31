@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Contact</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+      {{!-- header  --}}
+      <div class="viewDetailHeader">
+        <h2><i class='bx bxs-edit'></i> View Detail</h2>
+      </div>
+
+       {{!--view all user data  Box--}}
+       <div class="viewDetailBx">
+        <div class="showUser">
+            <div class="userData">
+                <div class="userImage"><img src="/public/img/user-comments.png" alt=""></div>
+                <div class="userDetail">
+                    <p class="username">{{getContactData.username}}</p>
+                    <p class="userEmail">{{getContactData.email}}</p>
+                </div>
+            </div>
+            <div class="data">{{getContactData.date}}</div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="showDataDetail">
+            <div class="detailTitle"><i class='bx bxs-edit' ></i> {{getContactData.subject}}</div>
+            <div class="detailContent">
+              {{getContactData.message}}
+            </div>
+        </div>
+
+
+
+       </div>
+
+        {{!-- send email back Box --}}
+       <div class="sendBackEmail">
+        <div class="inputBx">
+                <label for="adminEmail">From : </label>
+                <input type="text" id="adminEmail" value="BCMMDev Support <BCMMDev_Official@gmail.com>">
+            </div>
+            <div class="inputBx">
+                <label for="">To : </label>
+                <input type="text" id="clientEmail" value="{{getContactData.email}}">
+            </div>
+                <textarea name="" id="subject_Input" cols="30" rows="10" placeholder="Subject ..."></textarea>
+                <div class="btn-send-email">Send Message</div>
+       </div>
+
+
+
+        </div>
+        </div>
+
+
+
+    {{>allScript}}
+</body>
+
+</html>

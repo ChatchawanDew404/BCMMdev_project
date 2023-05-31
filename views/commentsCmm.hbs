@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Community"}}
+<link rel="stylesheet" href="">
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Community"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Community</p>
+  </div>
+  </div>
+</section>
+    
+
+
+{{!-- Comment in community --}}
+<section class="commentCmm">
+  <div class="container">
+
+    <div class="header">
+      <p>Community</p>
+      <h2>Chat with our community members.</h2>
+    </div>
+
+    {{!--see one post from user  --}}
+    <div class="post-col">
+            <div class="post-header-bx">
+                <div class="image"><img src="/public/cmmUserPostImg/{{oneUserPost.userImage}}" alt=""></div>
+                <div class="data">
+                  <p class="post-category">{{oneUserPost.category}}</p> 
+                    <p class="user-post">{{oneUserPost.username}}</p>
+                    <p class="date-post">{{oneUserPost.postTime}}</p>
+                </div>
+            </div>
+            <div class="content">
+              <p>{{oneUserPost.content}}</p>
+            </div>
+        </div>
+   
+   {{!-- line and show quantity comment --}}
+     <div class="comment-line">
+      <div class="border-line"></div>
+      {{#if manyUserComment.length}}
+        <div class="all-comments">{{manyUserComment.length}} Comments</div>
+      {{else}}
+        <div class="all-comments">0 Comments</div>
+      {{/if}}
+     </div>
+
+
+
+     {{!-- add comment post --}}
+     <div class="add-comment-post">
+      <form action="/community/user-post-{{oneUserPost.id}}/createComment" method="POST" id="{{oneUserPost.id}}">
+
+        <div class="header">
+          <input type="file" hidden>
+          <img src="/public/img/user-comments.png" alt="" >
+          <div class="box-img"></div>
+        </div>
+       <div class="content">
+         <input type="text" class="usernameComment" name="username" placeholder="Enter you name ...">
+        <textarea name="userComment" class="contentComment" id="" cols="30" rows="10"></textarea>
+        <button class="post-comments-1" type="submit">comment</button>
+        <div class="post-comments-2 cancel-post-comment">cancel</div>
+       </div>
+      </form>
+     </div>
+
+
+     {{!-- All user comment post --}}
+
+     {{#each manyUserComment}}
+     <div class="comment-post-from-user">
+        <div class="cpfu-header">
+          <img src="/public/img/user-comments.png" alt="" >
+        </div>
+
+       <div class="user-content">
+         <p><span class="username">{{this.username}}</span></p>
+         <p><span class="dataPost">{{this.createdAt}}</span></p>
+       <p class="user-content-bx">{{this.content}}</p>
+       </div>
+     </div>
+    {{/each}}
+   
+  
+
+
+  </div>
+</section>
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

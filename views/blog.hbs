@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Blog"}}
+<link rel="stylesheet" href="">
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Blog"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Blog</p>
+  </div>
+  </div>
+</section>
+
+<section class="blog">
+    <div class="container">
+       <div class="control-category">
+        <select name="" id="" class="category-blog">
+           <option value="" selected>All</option>
+            <option value="">Technology</option>
+            <option value="">Business</option>
+            <option value="">Investment</option>
+            <option value="">Marketing</option>
+            <option value="">Network & System </option>
+            <option value="">IT Management </option>
+            <option value="">Database Management</option>
+            <option value="">Website</option>
+            <option value="">Other</option>
+        </select>
+
+          <div class="search-blog">
+        <input type="text" placeholder="Search..." id="search_Input">
+          <button class="searchNow"><i class='bx bx-search-alt-2'></i></button>
+       </div>
+
+
+       </div>
+
+     <div class="row">
+
+      {{#each allBlogData}}   
+        <div class="blog-col">
+        <a href="/blog/readBlog/blogID-{{this.id}}" class="image"><img src="/public/createBlogImg/{{this.imageBlog}}" alt=""></a>
+
+        <div class="content">
+          <p class="category">{{this.category}}</p>
+
+          <h2 class="title"><a href="/blog/readBlog/blogID-{{this.id}}">{{this.title}}</a></h2>
+           <div class="blogData">
+             <p class="creator"><i class='bx bxs-user' ></i> <span>{{this.username}}</span></p>
+              <p class="createBlogTime"><span>{{this.createBlogAt}}</span></p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+     </div>
+
+      <div class="not-have-blog-category">
+        <div class="image"><img src="/public/img/nohavePost.png" alt=""></div>
+        <h2>Looks like this content hasn't happened yet. You can <a href="/contact">contact us</a> to add the content you want here.</h2>
+      </div>
+     
+    </div>
+</section>
+
+
+
+
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

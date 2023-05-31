@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Admin</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+               <div class="manageAdmin-header">
+                    <h2><i class='bx bxs-trash'></i> Delete Admin</h2>
+                </div>
+
+        <div class="showDeleteAdmin">
+            <p>confirm to delete <span class="adminDelName" id={{adminData.id}}>{{adminData.username}}</span></p>
+            <input type="password" placeholder="enter password...." id="check_pwd_del_admin">
+
+       <div class="deleteAdminBtn">
+       <button class="delete_Admin_Btn">Delete</button>
+       <a href="/admin/manageAdmin" class="cancel_delete_admin_btn">Cancel</a>
+       </div>
+        </div>
+
+                
+        </div>
+
+
+
+    {{>allScript}}
+</body>
+
+</html>

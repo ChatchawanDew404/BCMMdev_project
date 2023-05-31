@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Admin</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+               <div class="manageAdmin-header">
+                    <h2><i class='bx bxs-edit' ></i> Edit Admin</h2>
+                </div>
+
+       <div class="editAdminBx">
+       <div class="allInputBx">
+         <div class="inputBx">
+            <label for="edit-admin-name">Username</label>
+            <input type="text" id="edit-admin-name" name="username" value="{{getEditAdmin.username}}">
+            <span class="edit_error_invalid"></span>
+            </div>
+        <div class="inputBx">
+            <label for="edit-admin-email">Email <span style="font-size: 13px;">(new)</span></label>
+            <input type="email" id="edit-admin-email" name="email">
+            <span class="edit_error_invalid"></span>
+            </div>
+        <div class="inputBx">
+            <label for="edit-admin-password">Password <span style="font-size: 13px;">(check)</span></label>
+            <input type="password" id="edit-admin-password" name="password">
+            <span class="edit_error_invalid"></span>
+            </div>
+        <div class="inputImgBx">
+            <label for="adminImg"><i class='bx bx-upload' ></i> <span class="admin-img-name">Choose Image...</span></label>
+            <input type="file" id="adminImg" accept="image/*" hidden>
+        </div>
+       </div>
+
+        <div class="editAdminBtnBx">
+       <button class="edit_Admin_Btn" id={{editAdminID}}>Edit</button>
+        <a href="/admin/manageAdmin" class="cancel_edit_admin_btn">Cancel</a>
+      </div>
+      </div>
+
+
+         
+</div>
+
+    {{>allScript}}
+</body>
+
+</html>

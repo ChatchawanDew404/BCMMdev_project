@@ -1,0 +1,84 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+
+
+.banner{
+    background: url(/public/img/banner1.jpg);
+    background-position:40%;
+    background-size: cover;
+    position: relative;
+}
+.banner::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+.banner .container{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .container .content{
+   text-align: center; 
+   z-index: 10;
+}
+.banner .container .content h1{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    height: 90px;
+}
+.banner .container .content p{
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+.banner .container .content .banner-page-color{
+ color: var(--blue1);
+}
+
+
+
+
+/* ============================================= */
+/*                    RESPONSIVE                 */
+/* ============================================= */
+@media only screen and (max-width: 991px){
+.banner .container .content h1{
+    font-size: 60px;
+     height: 90px;
+}}
+@media only screen and (max-width: 768px){
+.banner .container .content h1{
+    font-size: 50px;
+     height: 70px;
+}
+.banner .container .content p{
+    font-size: 20px;
+}
+}
+@media only screen and (max-width: 600px){
+.banner .container .content h1{
+    font-size: 45px;
+     height: 60px;
+}
+.banner .container .content p{
+    font-size: 18px;
+}}
+@media only screen and (max-width: 480px){
+.banner .container .content h1{
+    font-size: 40px;
+     height: 50px;
+}}

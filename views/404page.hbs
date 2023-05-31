@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="About"}}
+<body>
+    {{!-- NAVIGATION BAR --}}
+     {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="404 Page"></h1>
+    <p>Home / Pages / <span class="banner-page-color"> ...</p>
+  </div>
+  </div>
+</section>
+
+
+
+<section class="page_404">
+  <div class="image">
+    <img src="/public/img/404_not_found_img.png" alt="">
+  </div>
+  <h1>OOPS! PAGE NOT FOUND</h1>
+  <p>The page you're looking for might be renamed, removed, or might never exist on this planet</p>
+  <a href="/" class="page_404_btn goHome">GO TO HOMEPAGE</a>
+  <a href="/contact" class="page_404_btn report">REPORT PROBLEM</a>
+</section>
+
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

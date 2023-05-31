@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+{{>adminNavbar}}
+
+<div class="adminDashboard">
+    <div class="close-mobile-navbar"><i class='bx bx-x'></i></div> 
+    <div class="header">
+        <div class="menu"><i class='bx bx-menu' ></i> <span>Manage Contact</span></div>
+    {{>adminHeaderUser}}
+    </div>
+
+    <div class="main-adminBx">
+
+               <div class="manageContact-header">
+                    <h2>List of contact</h2>
+                </div>
+
+
+            <div class="manageContactBx">
+                {{!-- <div class="search-contact">
+                    <input type="text" name="" id="" placeholder="Fake search contacts...">
+                    <i class='bx bx-search-alt-2 search-contact-btn'></i>
+                </div> --}}
+               <div class="show-contact-list">
+                 <table class="contact-list">
+                    <tr>
+                        <th>No.</th>
+                        <th>username</th>
+                        <th>email</th>
+                        <th>subject</th>
+                        <th>Date</th>
+                        <th>Detail</th>
+                        <th>delete</th>
+                    </tr>
+                 {{#each allClientContactData}}
+                  <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.username}}</td>
+                        <td>{{this.email}}</td>
+                        <td >{{this.subject}}</td>
+                        <td >{{this.date}}</td>
+                        <td><a href="/admin/manageAdmin/contactDetail/contact-{{this.id}}" class="detail-contact"><i class='bx bxs-edit-alt' ></i></a></td>
+                        <td><a href="" id="{{this.id}}" class="delete-contact"><i class='bx bxs-trash'></i></a></td>
+                    </tr>
+                 {{/each}}
+                
+                </table>
+               </div>
+
+
+            </div>
+      
+    </div>
+
+</div>
+
+   
+ {{>allScript}}
+
+    
+</body>
+
+</html>

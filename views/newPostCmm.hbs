@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Community"}}
+<link rel="stylesheet" href="">
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Community"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Community</p>
+  </div>
+  </div>
+</section>
+
+{{!-- New Post in Community --}}
+<section class="newPost">
+    <div class="container">
+        <div class="header">
+            <p>New Post</p>
+            <h2>Create your own conversations to share with the community.</h2>
+        </div>
+
+
+        <form action="" method="" enctype="multipart/form-data">
+
+        <div class="user-image">
+              <input type="file" id="file" accept="image/*" hidden>
+                 <div class="image-area" data-img="">
+                   <i class='bx bxs-cloud-upload'></i>
+                   <p>Upload Image</p>
+                 </div>
+              <div class="select-image">Select Image</div>
+        </div>
+               
+
+                <div class="add-name-category">
+                    <input type="text" placeholder="Enter your name ..." id="new_post_name">
+                    <select name="" id="cmm_new_post_category">
+                        <option value="Select Category ..." disabled selected><span style="color:aqua" >Select Category ...</span></option>
+                        <option value="Technology">Technology</option>
+                        <option value="Business">Business</option>
+                        <option value="Investment">Investment</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Network & System ">Network & System </option>
+                        <option value="IT Management ">IT Management </option>
+                        <option value="Database Management">Database Management</option>
+                        <option value="Website">Website</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+            <div class="newPost-content">
+                <textarea name="" id="new_post-article" placeholder="Enter you article ..."></textarea>
+            </div>
+
+            <button type="submit" class="create-post-btn">Create Post</button>
+        </form>
+
+        
+    </div>
+</section>
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

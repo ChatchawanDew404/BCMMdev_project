@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Blog"}}
+<link rel="stylesheet" href="">
+<body>
+    {{!-- NAVIGATION BAR --}}
+ {{> navbar}}
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Blog"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Blog</p>
+  </div>
+  </div>
+</section>
+
+
+{{!--READ BLOG SECTION --}}
+<section class="readBlog container">
+  <div class="row">
+    <div class="blog-left" id="{{blogID}}">
+
+      <div class="bl-header">
+       <div class="bl-header-left">
+         <div class="image blogShowCreator"><img src="" alt=""></div>
+        <div class="title">
+          <p class="category">Technology</p>
+          <p class="creator "></p>
+          <p class="createDate">20 Jan 2023</p>
+        </div>
+       </div>
+       <div class="bl-header-right">
+        <div class="social-icons">
+          <a href=""><i class='bx bxl-facebook' ></i></a>
+          <a href=""><i class='bx bxl-youtube'></i></a>
+          <a href=""><i class='bx bxl-twitter' ></i></a>
+          <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+        </div>
+       </div>
+      </div>
+
+
+      <div class="bl-content">
+        <div class="image blogShowImg"><img src="/public/img/banner1.jpg" alt=""></div>
+
+<div class="title">
+  <h1>You’re Using ChatGPT Wrong! Here’s How to Be Ahead of 99% of ChatGPT Users</h1>
+  </div>
+        <div class="content"></div>
+      </div>
+    </div>
+
+    <div class="blog-right">
+      <div class="adminBlog">
+       <div class="image">
+        <img src="/public/img/banner1.jpg" alt="">
+       </div>
+       <div class="content">
+        <h3 class="name"></h3>
+         <p>"Creator of the blog You can follow the work here."</p>
+         <a href="#" class="follow-btn youtube">youtube</a>
+         <a href="#" class="follow-btn facebook">facebook</a>
+       </div>
+      </div>
+
+      <div class="moreBlog">
+              
+      {{!-- <a href="">
+        <div class="blogBox">
+          <div class="image"><img src="/public/img/banner2.jpg" alt=""></div>
+           <div class="content">
+            <div class="header">
+              <div class="header-img"><img src="/public/img/user-comments.png" alt=""></div>
+            <div class="header-content">
+                <p class="category">other</p>
+              <p class="name">Chatchawan Ngernthaworn</p>
+              <p class="date">20 Jan 2023</p>
+            </div>
+            </div>
+            <p class="new_Title_Blog">10 Things To Do In The Evening Instead Of Watching Netflix 10 Things To Do In The Evening Instead Of Watching Netflix</p>
+          </div>
+        </div>
+      </a> --}}
+    
+        {{!-- recomment 5 blog by random blog --}}
+        {{#each getAllBlogData}}
+     <a href="/blog/readBlog/blogID-{{this.id}}">
+        <div class="blogBox">
+          <div class="image"><img src="/public/createBlogImg/{{this.imageBlog}}" alt=""></div>
+           <div class="content">
+            <div class="header">
+              <div class="header-img"><img src="/public/adminImage/{{this.image}}" alt=""></div>
+            <div class="header-content">
+                <p class="category">{{this.category}}</p>
+              <p class="name">{{this.username}}</p>
+              <p class="date">20 Jan 2023</p>
+            </div>
+            </div>
+            <p class="new_Title_Blog">{{this.title}}</p>
+          </div>
+        </div>
+      </a>
+    
+        {{/each}}
+    
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

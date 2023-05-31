@@ -1,0 +1,251 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+
+/* ======================================================= */
+/*          admin navbar and adminDashboard header         */
+/* ======================================================= */
+.admin-navigation{
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background: linear-gradient(#5467e1,#4765ec, #494ff3);
+    transition: all .4s ease;
+}
+
+.admin-navigation .navLogo{
+    padding: 14px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+.admin-navigation .navLogo img{
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+
+.admin-navigation .navBx .admin-navLink a{
+    display: block;
+    padding:20px 15px ;
+color: white;
+font-size: 17px;
+transition: all .4s ease;
+}
+.admin-navigation .navBx .admin-navLink a:hover{
+  background: var(--blue-btn-hover);
+}
+.admin-navigation .navBx .admin-navLink a i{
+font-size: 20px;
+margin-right: 5px;
+}
+
+
+/*--adminDashboard  */
+.adminDashboard .close-mobile-navbar{display: none;}
+.adminDashboard{
+    position: absolute;
+    left: 280px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    background: white;
+    transition: all .4s ease;
+}
+.adminDashboard .header{
+    background: #ffffff;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.adminDashboard .header .menu{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    gap: 10px;
+    cursor: pointer;
+}
+.adminDashboard .header .menu span{
+    font-size: 20px;
+}
+
+.adminDashboard .header .adminUser{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+}
+.adminDashboard .header .adminUser .image{
+    position: relative;}
+.adminDashboard .header .adminUser .image .greenPoint{
+    position: absolute;
+bottom: 5px;
+right: -3px;
+width: 13px;
+height: 13px;
+background: rgb(5, 209, 5);
+border-radius: 50%;
+border: 2px solid white;}
+
+.adminDashboard .header .adminUser .image img{
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50%;
+    border: 2px solid var(--blue1);
+}
+
+.adminDashboard.active{
+    left: 0;
+    width: 100%;
+    transition: all .4s ease;
+}
+.admin-navigation.active .navBx .admin-navLink a,
+.admin-navigation.active .navBx .admin-navLink a i{
+font-size: 0;
+transition: all .4s ease;
+}
+.admin-navigation.active{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: all .4s ease;
+}
+/* show screen main data and more  */
+.adminDashboard .main-adminBx{
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding:40px 20px;
+}
+
+/* *{border: 1px solid red;} */
+@media only screen and (max-width: 1100px){
+    .admin-navigation{
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        background: linear-gradient(#5467e1,#4765ec, #494ff3);
+    }
+    
+    /*--adminDashboard  */
+    .adminDashboard{
+        position: absolute;
+        left: 250px;
+        width: calc(100% - 250px);
+        min-height: 100vh;
+        background: white;
+    }
+}
+/* make new navigation active */
+@media only screen and (max-width: 768px){
+    .adminDashboard .header{
+        padding: 10px 20px;
+    }
+    .admin-navigation{
+        position: fixed;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(#5467e1,#4765ec, #494ff3);
+    }
+    .admin-navigation.active{
+        opacity: 1;
+        visibility:visible;
+        width: 250px !important;
+        transition: all .4s ease;
+    }
+ 
+    /* --adminDashboard  */
+    .adminDashboard{
+        position: absolute;
+        left:0;
+        width: 100% !important;
+        min-height: 100vh;
+        background: white;
+        transition: all .4s ease;
+    }
+    .adminDashboard.active::after{
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(0,0,0,.7);
+        width: 100%;
+        height: 100%;
+        transition: all .4s ease;
+    }
+
+    .adminDashboard .close-mobile-navbar.active{
+        display: inline-block;
+        color: white;
+        font-size: 50px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 15;
+        transition: all .4s ease;
+    }
+    .admin-navigation.active .navBx .admin-navLink a,
+.admin-navigation.active .navBx .admin-navLink a i{
+font-size: 16px;
+}
+    .admin-navigation .navBx .admin-navLink a,
+.admin-navigation .navBx .admin-navLink a i{
+font-size: 0;
+}
+}
+
+@media only screen and (max-width: 480px){
+    .adminDashboard .header .menu{
+        gap: 5px;
+        font-size: 22px;
+    }
+    .adminDashboard .header .menu span{
+        font-size: 16px;
+    }
+    .adminDashboard .header{
+        padding: 10px 15px;
+    }
+    .adminDashboard .header .adminUser .image img{
+        width: 35px !important;
+        height: 35px !important;
+        border-radius: 50%;
+        border: 2px solid var(--blue1);
+    }
+    .adminDashboard .header .adminUser .image .greenPoint{
+    bottom: 4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;}
+    .adminDashboard .header .adminUser{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .adminDashboard .main-adminBx{
+        padding:40px 10px;
+    }
+}
+
+
+
+
+
+
+
+

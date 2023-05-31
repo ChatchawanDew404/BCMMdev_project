@@ -1,0 +1,591 @@
+:root{
+    --black:#1c2035;
+    --blue1:#4761ff;
+    --blue-btn-hover:#3c4fc9;
+    --white:#fff;
+    --gray:#555;
+}
+
+/* ===================================== */
+/*              Community.hbs           */
+/* ===================================== */
+.community .option-community{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.community .option-community  select{
+    cursor: pointer;
+    padding: 8px;
+    font-size: 17px;
+    outline: none;
+    width: 250px;
+}
+.community .option-community .newPost{
+    padding: 10px 30px;
+    border-radius:5px;
+    background: var(--blue1);
+    font-size: 18px;
+}
+.community .option-community .newPost a{ 
+   color: white;
+}
+.community .option-community .newPost:hover{
+   background: var(--blue-btn-hover);
+}
+
+
+/*--- All post  */
+.community .row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+}
+
+.community .row .post-col{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.community .row .post-col:hover{
+    border: 1px solid rgb(71, 97, 255,0.4);
+}
+.community .row .post-col:hover .content{
+    border-top: 1px solid rgba(0,0,0,0.13);
+    border-bottom: 1px solid rgba(0,0,0,0.13);
+}
+
+/* --------------------------------------------- */
+.community .row .post-col .post-header-bx{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.community .row .post-col .post-header-bx .image{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.community .row .post-col .post-header-bx .image img{
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.community .row .post-col .post-header-bx .data .post-category{ 
+    color: white; 
+    background: var(--blue1); 
+    display: inline-block;
+     border-radius: 10px;
+      padding: 4px 5px; 
+      font-size: 10px !important;margin-bottom: 5px;}
+
+
+.community .row .post-col .post-header-bx .data .user-post{
+        margin-bottom: 3px;
+}
+.community .row .post-col .post-header-bx .data .user-post,
+.community .row .post-col .post-header-bx .data .date-post{
+    color: black;
+    font-size: 500;
+    font-size: 13px !important;
+}
+.community .row .post-col .post-header-bx .data .date-post{
+    color: var(--gray) !important;
+    font-size: 12px !important;
+}
+
+
+
+.community .row .post-col .content{
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 15px 8px;
+    font-size: 13px;
+    line-height: 1.3;
+}
+.community .row .post-col .comments{
+    padding:7px 10px 0px;
+    font-size: 14px;
+}
+
+
+/* Community error show */
+.community .err-community{width: 100%;  text-align: center; display: block;}
+.community .err-community,.not-have-categoryCmm img{
+    max-width: 600px;
+    margin: auto;
+}
+.community .err-community .report-problem-cmm{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--blue1);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+/* Not have post box in Community  */
+.community .not-have-post{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: -40px;
+    display: none;
+}
+.community .not-have-post.active{
+    display: block;
+}
+.community .not-have-post img{
+    max-width: 500px !important;
+}
+
+/* -------- media query */
+@media only screen and (max-width: 991px){
+    .community .row{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 768px){
+    .community .row{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 600px){
+    .community .option-community  select{
+        font-size: 17px;
+        width: 140px;
+    }
+    .community .option-community .newPost{
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .community .row{
+        grid-template-columns: 1fr;
+    }
+    .community .err-community h1 ,.community .not-have-post h1{
+        font-size: 20px;
+    }
+}
+
+
+
+/* ===================================== */
+/*              NewPostCmm.hbs           */
+/* ===================================== */
+.newPost {text-align: center;}
+/* new post header */
+.newPost .container .header{
+    margin: auto;
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 80px;
+    color: #1f1f1f;
+}
+.newPost .container .header p{
+  color: var(--blue1);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.newPost .container .header h2{
+    font-size: 44px;
+}
+
+
+/* new post user image */
+.newPost .image-area{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    margin:0 auto 20px;
+}
+.newPost .user-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.newPost .image-area p{
+    font-size: 15px;
+}
+
+.newPost .user-image .select-image{
+    display: inline-block;
+    background: var(--blue1);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    text-align: center;
+    max-width: 250px;
+    border: none;
+    cursor: pointer;
+}
+.newPost .user-image .select-image:hover,
+.newPost .create-post-btn:hover{
+    background: var(--blue-btn-hover);
+    cursor: pointer;
+}
+/* newPost select and name user */
+.newPost .add-name-category{margin-top: 20px;}
+
+.newPost .add-name-category select,
+.newPost .add-name-category input,
+.newPost .newPost-content textarea{
+    background: #f2f2f2;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin:0 auto 20px;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline:none;
+    border: none;
+}
+
+.newPost .newPost-content textarea{
+    max-height: 400px;
+    height: 200px;
+}
+
+.newPost .create-post-btn{
+  background: var(--blue1);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+
+/* ===================================== */
+/*              commentsCmm.hbs          */
+/* ===================================== */
+/*-- new post header */
+.commentCmm .container .header{
+    margin: auto;
+    text-align: center;
+    max-width: 650px;
+    margin:0 auto 80px;
+    color: #1f1f1f;
+}
+.commentCmm .container .header p{
+  color: var(--blue1);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.commentCmm .container .header h2{
+    font-size: 44px;
+}
+
+
+/* -- comment-user-post */
+.commentCmm .post-col{
+    border: 1px solid rgb(71, 97, 255,0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.commentCmm .post-col .post-header-bx{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.commentCmm .post-col .post-header-bx .image{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.commentCmm .post-col .post-header-bx .image img{
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.commentCmm .post-col .post-header-bx .data .post-category{ 
+    color: white; 
+    background: var(--blue1); 
+    display: inline-block;
+     border-radius: 10px;
+      padding: 5px; 
+      font-size: 11px !important;margin-bottom: 5px;}
+
+
+.commentCmm .post-col .post-header-bx .data .user-post{
+        margin-bottom: 3px;
+}
+.commentCmm .post-col .post-header-bx .data .user-post,
+.commentCmm .post-col .post-header-bx .data .date-post{
+    color: black;
+    font-size: 500;
+    font-size: 13px !important;
+}
+.commentCmm .post-col .post-header-bx .data .date-post{
+color: var(--gray) !important;
+}
+
+.commentCmm .post-col .content{
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding: 15px 8px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+
+/*-- all comments */
+.commentCmm  .comment-line{
+    margin:80px 0 30px;
+    position: relative;
+}
+.commentCmm  .comment-line .border-line{
+   border: 1px solid rgba(0,0,0,0.1);
+   height: 1px;
+}
+.commentCmm  .comment-line .all-comments{
+   position: absolute;
+   top: -14px;
+   left: 20px;
+   font-size:22px ;
+   color: black;
+   background: white;
+   padding: 0 10px;
+}
+
+/*-- add comment post */
+.commentCmm .add-comment-post{
+    margin-right: 100px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    padding:15px 10px;  
+    margin-bottom: 40px;  
+}
+.commentCmm .add-comment-post form{
+   display: grid;
+   grid-template-columns: 80px 1fr;
+}
+
+
+.commentCmm .add-comment-post .header{
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.commentCmm .add-comment-post img{
+    background: #f0f0f0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.commentCmm .add-comment-post  .content{
+    padding:5px 10px;
+}
+
+.commentCmm .add-comment-post  .content input{
+    width: 100%;
+    max-width: 300px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    outline: none;
+    border: none;
+    background: #efefef;
+}
+.commentCmm .add-comment-post  .content textarea{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    background: #efefef;
+    max-height: 80px;
+    margin: 10px 0;
+    resize: none;
+}
+
+.commentCmm .add-comment-post  .content .post-comments-1,
+.commentCmm .add-comment-post  .content .post-comments-2{
+    color: white;
+    border-radius: 5px;
+    padding:7px 15px ;
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.commentCmm .add-comment-post  .content .post-comments-1{
+    background: var(--blue1);
+}
+.commentCmm .add-comment-post  .content .post-comments-1.btn-cmm-color{
+    background: #363e71;
+}
+.commentCmm .add-comment-post  .content .post-comments-2{
+    background: rgb(234, 73, 73);
+}
+.commentCmm .add-comment-post  .content .post-comments-1:hover{
+    background: var(--blue-btn-hover);
+}
+.commentCmm .add-comment-post  .content .post-comments-2:hover{
+    background: rgb(180, 7, 7);
+}
+
+/* -- comment from user */
+
+.commentCmm .comment-post-from-user{    
+    margin-right: 100px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    padding:15px;  
+    margin-bottom: 30px;  
+    display: grid;
+   grid-template-columns: 80px 1fr;
+   gap: 10px;
+}
+
+.commentCmm .comment-post-from-user .cpfu-header{
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.commentCmm .comment-post-from-user img{
+    background: #e6e6e6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.commentCmm .comment-post-from-user .user-content p{
+    color: black ;
+    font-size: 13px;
+}
+.commentCmm .comment-post-from-user .user-content p:nth-child(1){
+    font-weight: 500;
+}
+.commentCmm .comment-post-from-user .user-content p:nth-child(2){
+    color: black ;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.commentCmm .comment-post-from-user .user-content-bx{
+    padding:5px 0;
+    font-size: 15px;
+    color: var(--gray) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px){
+    .newPost .container .header h2,
+    .commentCmm .container .header h2{
+        font-size: 43px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .newPost .container .header h2,
+    .commentCmm .container .header h2{
+        font-size: 40px;
+        max-width: 450px;
+        margin: auto;
+    }
+    .commentCmm .add-comment-post,
+    .commentCmm .comment-post-from-user{
+        margin-right: 0;  
+    }
+}
+@media only screen and (max-width: 600px){
+    .newPost .container .header h2,
+    .commentCmm .container .header h2{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .newPost .container .header h2,
+    .commentCmm .container .header h2{
+        font-size: 27px;
+    }   
+
+    .commentCmm .add-comment-post form{
+        display: grid;
+        grid-template-columns: 60px 1fr;
+     }
+
+     .commentCmm  .comment-line .all-comments{
+        font-size:18px ;
+     }
+
+     /*-- comment post from user */
+     .commentCmm .comment-post-from-user{    
+       grid-template-columns: 40px 1fr;
+
+    }
+    .commentCmm .comment-post-from-user{    
+        padding:15px 10px;  
+    }
+     
+    .commentCmm .comment-post-from-user .cpfu-header{
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+

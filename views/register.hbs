@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead customTitle="Register"}}
+<body>
+    {{!-- NAVIGATION BAR --}}
+     {{> navbar}}
+
+
+{{!-- Banner --}}
+<section class="banner">
+  <div class="container">
+  <div class="content">
+      <h1 id="banner_Tx" data-banner-Text="Register"></h1>
+    <p>Home / Pages / <span class="banner-page-color">Register</p>
+  </div>
+  </div>
+</section>
+
+
+
+
+{{!-- Register --}}
+<section class="register">
+   <div class="container">
+     <div class="header">
+        <p>register Free</p>
+        <h2>Let's register to conversation with our community here.</h2>
+    </div>
+
+
+
+    <div class="row">
+        <div class="left-col">
+            <div class="change-register-login">
+                <p class="register-btn active">Register</p>
+                <p class="login-btn">Login</p>
+            </div>
+
+            <div class="show-register-login">
+                <div class="register-bx active">
+                <form action="">
+                   <div class="inputBx">
+                    <label for="username-register">Username *</label>
+                   <input type="text" id="username-register" placeholder="Username">
+                   </div>
+                   <div class="inputBx">
+                    <label for="email-register">Email address *</label>
+                   <input type="text" id="email-register" placeholder="Email address">
+                   </div>
+                   <div class="inputBx">
+                    <label for="password-register">password *</label>
+                   <input type="password" id="password-register" placeholder="password">
+                   </div>
+                   <p>Already have an account? <span class="login-now">Login</span></p>
+               <button type="submit">Register</button>
+
+
+                </form>
+            </div>
+            <div class="login-bx"> 
+                <form action="">
+                    <div class="inputBx">
+                        <label for="user-email-login">Username or Email address *</label>
+                        <input type="text" id="user-email-login">
+                    </div>
+                    <div class="inputBx">
+                        <label for="password-login">password</label>
+                        <input type="text" id="password-login">
+                    </div>
+
+
+                     <div class="checkBx">
+                    <input type="checkbox">
+                    <label for="">Remember me</label>
+                  </div>
+
+
+                    <button>LOGIN</button>
+                   <div class="bx">
+                    <p>Don't have an account? <span class="register-now">Register</span></p>
+                     <a href="" class="forget-password">Forget password ?</a>
+                   </div>
+                </form>
+            </div>
+
+            </div>
+        </div>
+        <div class="right-col">
+            <img src="/public/img/banner1.jpg" alt="">
+        </div>
+    </div>
+
+   </div>
+</section>
+
+
+
+{{!-- FOOTER  --}}
+{{> footer}}
+
+{{> allScript}}
+</body>
+</html>

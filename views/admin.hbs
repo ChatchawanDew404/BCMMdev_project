@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+
+{{>adminNavbar}}
+
+
+
+<div class="adminDashboard">
+    <div class="close-mobile-navbar"><i class='bx bx-x'></i></div> 
+    <div class="header">
+    <div class="menu"><i class='bx bx-menu' ></i> <span>Dashboard</span></div>
+    {{>adminHeaderUser}}
+    </div>
+
+    <div class="main-adminBx">
+
+        <div class="showDataWeb">
+            <div class="dataBx">
+                <div class="content">
+                    <div class="sumData">{{quantityPost.countPost}}</div>
+                    <div class="nameData">All Posts</div>
+                </div>
+                   <i class='bx bxs-chat' ></i>
+            </div>
+            <div class="dataBx">
+                <div class="content">
+                 <div class="sumData">{{quantityBlog.countBlog}}</div>
+                    <div class="nameData">All Blogs</div>
+                </div>
+                  <i class='bx bxs-book'></i>
+            </div>
+            <div class="dataBx">
+                 <div class="content">
+                    <div class="sumData">{{quantityContact.countContact}}</div>
+                    <div class="nameData">All Contact</div>
+                </div>
+                        <i class='bx bxs-comment-detail'></i>
+            </div>
+            <div class="dataBx">
+               <div class="content">
+                    <div class="sumData">{{quantityAdmin.countAdmin}}</div>
+                    <div class="nameData">All Admin</div>
+                </div>
+                     <i class='bx bxs-user-circle' ></i>
+            </div>
+        </div>
+
+        <div class="showGraph">
+            <div class="graphBx graph-1"><canvas id="myChart"></canvas></div>
+            <div class="graphBx graph-2"><canvas id="popularCategory"></canvas></div>
+        </div>
+    </div>
+
+</div>
+
+   
+    {{>allScript}}
+
+
+</body>
+
+</html>

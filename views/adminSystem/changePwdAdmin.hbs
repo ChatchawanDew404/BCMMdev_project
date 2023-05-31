@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>baseHead}}
+
+<body>
+
+
+    {{>adminNavbar}}
+
+    <div class="adminDashboard">
+        <div class="close-mobile-navbar"><i class='bx bx-x'></i></div>
+        <div class="header">
+            <div class="menu"><i class='bx bx-menu'></i> <span>Manage Admin</span></div>
+            {{>adminHeaderUser}}
+        </div>
+
+        <div class="main-adminBx">
+
+               <div class="manageAdmin-header">
+                    <h2><i class='bx bxs-edit' ></i> Change Password</h2>
+                </div>
+
+      <div class="change_pwd_admin">
+        <div class="allInputBx">
+        <div class="inputBx">
+            <label for="admin-old-password-changePwd">Old password</label>
+            <input type="password" id="admin-old-password-changePwd" name="password">
+            <span class="changePwd_error_invalid"></span>
+            </div>
+        <div class="inputBx">
+            <label for="admin-new-password-changePwd">New password</label>
+            <input type="password" id="admin-new-password-changePwd" name="password">
+            <span class="changePwd_error_invalid"></span>
+            </div>
+        <div class="inputBx">
+            <label for="admin-confirm-password-changePwd">Confirm password</label>
+            <input type="password" id="admin-confirm-password-changePwd" name="confirm-password">
+            <span class="changePwd_error_invalid"></span>
+            </div>
+
+         </div>
+         <div class="changePwdAdminBtn">
+        <button class="changePwd_Admin_Btn" id={{getAdminID}}>Change Password</button>
+       <a href="/admin/manageAdmin" class="cancel_changePwd_admin_btn">Cancel</a>
+       </div>
+                
+        </div>
+
+                
+        </div>
+
+
+
+    {{>allScript}}
+</body>
+
+</html>
