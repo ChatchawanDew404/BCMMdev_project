@@ -16,60 +16,60 @@
 
 [🟢 CLIENT]
 
--show all blog slide
+- show all blog slide
 
--search blog name
+- search blog name
 
--select category blog
+- select category blog
 
--read blog
+- read blog
 
--show all post community slide
+- show all post community slide
 
--select category post
+- select category post
 
--create post
+- create post
 
--comment post
+- comment post
 
--contact us
+- contact us
 
--404 page
+- 404 page
 
 [🟢 ADMIN DASHBOARD]
 
--login admin dashboard
+- login admin dashboard
 
--Show data analysis results
+- Show data analysis results
 
--display all blog information
+- display all blog information
 
--search blog name
+- search blog name
 
--create blog
+- create blog
 
--edit blog
+- edit blog
 
--delete blog
+- delete blog
 
--display all contact information
+- display all contact information
 
-explore Contact Content
+- explore Contact Content
 
--simulate contact back
+- simulate contact back
 
--delete contact
+- delete contact
 
--display all admin information
+- display all admin information
 
--search admin name
+- search admin name
 
--create admin
+- create admin
 
--edit admin
+- edit admin
 
--delete admin
+- delete admin
 
--logout admin
+- logout admin
 
 🟢 DATABASE : MYSQL Workbench
