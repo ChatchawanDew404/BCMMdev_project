@@ -18,9 +18,8 @@
 
  show all blog slide
 
- search blog name
-
- select category blog
+search blog name
+select category blog
 
  read blog
 
