@@ -11,9 +11,13 @@ Welcome to BCMMDev project 2023
 💖 How to use code files from GitHub
 
 use git clone
+
 open project
+
 use "npm install" in terminal
+
 use "npm run dev" to run project
+
 💖 ALL SYSTEM
 
 [🟢 CLIENT]
