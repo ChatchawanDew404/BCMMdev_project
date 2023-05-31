@@ -4,13 +4,11 @@
 
 💖 How to use code files from GitHub
 
- use git clone
+- use git clone
 
- open project
-
- use "npm install" in terminal
-
- use "npm run dev" to run project
+- open project
+- use "npm install" in terminal
+- use "npm run dev" to run project
 
 💖 ALL SYSTEM
 
