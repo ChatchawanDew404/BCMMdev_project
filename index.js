@@ -47,7 +47,7 @@ app.use(function(req,res,next){
 res.status(404).render('404page.hbs')
 })
 
-app.listen(port,()=>{
+app.listen(port,"0.0.0.0",()=>{
     console.log(`http://localhost:${port}`)
 })
 
