@@ -35,7 +35,7 @@ app.use("/swiperSlide", express.static(path.join(__dirname, "node_modules/swiper
 app.use("/typedText", express.static(path.join(__dirname, "node_modules/typed.js")));
 // =========================================================
 
-const port = process.env.APP_PORT || 3006
+const port = process.env.APP_PORT || 3001
 
 app.use('/',generalRouter)
 app.use('/blog',blogRouter)
