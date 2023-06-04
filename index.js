@@ -35,7 +35,7 @@ app.use("/swiperSlide", express.static(path.join(__dirname, "node_modules/swiper
 app.use("/typedText", express.static(path.join(__dirname, "node_modules/typed.js")));
 // =========================================================
 
-const port = process.env.APP_PORT
+const port = process.env.APP_PORT || 3001
 
 app.use('/',generalRouter)
 app.use('/blog',blogRouter)
@@ -47,7 +47,7 @@ app.use(function(req,res,next){
 res.status(404).render('404page.hbs')
 })
 
-app.listen(port,()=>{
+app.listen(port,"0.0.0.0",()=>{
     console.log(`http://localhost:${port}`)
 })
 
